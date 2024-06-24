@@ -1,5 +1,6 @@
 const userNumber = document.getElementById("userNumber");
 const Btn = document.getElementById("button");
+const Reload = document.getElementById("reload");
 const userGuess = document.getElementById('userGuessValue');
 const previousMatchedGuess = document.getElementById('previousGuessValue');
 const img = document.getElementById("image");
@@ -10,7 +11,7 @@ const previousGuess = [];
 let regx = /[0-9]/;
 Btn.addEventListener("click", function () {
     if (leftNumbers > 0) {
-        if (regx.test(+userNumber.value)&&+userNumber.value<10&&+userNumber.value>=0) {
+        if (regx.test(+userNumber.value) && +userNumber.value < 10 && +userNumber.value >= 0) {
             num = Math.floor(Math.random() * 10);
             previousGuess + previousGuess.push(`${+userNumber.value}`);
             userGuess.innerText = previousGuess;
@@ -26,7 +27,7 @@ Btn.addEventListener("click", function () {
             }
             triesValue.innerText = `${+leftNumbers}`;
         }
-        else{
+        else {
             window.alert("wrong input");
 
         }
@@ -34,4 +35,8 @@ Btn.addEventListener("click", function () {
     } else {
         window.alert("your try number completed:");
     }
+});
+
+Reload.addEventListener("click", function () {
+    window.location.reload();
 });

@@ -91,6 +91,15 @@ body {
     color: var(--white);
 }
 
+.reload-btn{
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 20px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 576px) {
     .container {
         width: 98%;
